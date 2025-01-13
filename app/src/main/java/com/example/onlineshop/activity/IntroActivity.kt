@@ -2,12 +2,6 @@ package com.example.onlineshop.activity
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.onlineshop.MainActivity
-import com.example.onlineshop.R
 import com.example.onlineshop.databinding.ActivityIntroBinding
 
     class IntroActivity : BaseActivity() {

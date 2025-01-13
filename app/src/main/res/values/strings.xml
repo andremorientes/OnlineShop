@@ -3,4 +3,6 @@
     <string name="shopping_online">Shopping Online</string>
     <string name="intro_desc">The store of your dream.You will find everything that youneed here.</string>
     <string name="btnStart">Start Shopping</string>
+    <string name="search">Pesquisar</string>
+    <string name="profile">Profile</string>
 </resources>

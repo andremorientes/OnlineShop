@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.onlineshop.Adapter.BestSellerAdpater
 import com.example.onlineshop.Adapter.CategoryAdapter
 import com.example.onlineshop.R
 import com.example.onlineshop.ViewModel.MainViewModel
@@ -25,9 +26,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initCategories()
+        initBestSeller()
 
     }
 
+
+    private fun initBestSeller() {
+        binding.progressBarBestSeller.visibility= View.VISIBLE
+        viewModel.bestSeller.observe(this, Observer {
+            binding.rvBestSellers.layoutManager= LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false
+            )
+            binding.rvBestSellers.adapter= BestSellerAdpater(it)
+            binding.progressBarBestSeller.visibility= View.GONE
+        })
+    }
     private fun initCategories() {
         binding.progressBarCategories.visibility= View.VISIBLE
 

@@ -4,13 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.onlineshop.Adapter.BestSellerAdpater
+import com.example.onlineshop.Adapter.BestSellerAdapter
 import com.example.onlineshop.Adapter.CategoryAdapter
-import com.example.onlineshop.R
 import com.example.onlineshop.ViewModel.MainViewModel
 import com.example.onlineshop.databinding.ActivityMainBinding
 
@@ -36,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.bestSeller.observe(this, Observer {
             binding.rvBestSellers.layoutManager= LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false
             )
-            binding.rvBestSellers.adapter= BestSellerAdpater(it)
+            binding.rvBestSellers.adapter= BestSellerAdapter(it)
             binding.progressBarBestSeller.visibility= View.GONE
         })
     }

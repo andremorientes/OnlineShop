@@ -3,6 +3,14 @@
     <string name="shopping_online">Shopping Online</string>
     <string name="intro_desc">The store of your dream.You will find everything that youneed here.</string>
     <string name="btnStart">Start Shopping</string>
-    <string name="search">Pesquisar</string>
+    <string name="search">Search</string>
     <string name="profile">Profile</string>
+    <string name="categories">Categories</string>
+    <string name="best_seller_products">Best Seller Products</string>
+    <string name="see_all">See All</string>
+    <string name="cart">Cart</string>
+    <string name="favourite">Favourite</string>
+    <string name="explore">Explore</string>
+    <string name="spring_sale">Spring sale</string>
+    <string name="save_up_to_30_non_sale_sneakers">Save up to 30$\non sale Sneakers</string>
 </resources>

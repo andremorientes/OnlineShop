@@ -7,8 +7,8 @@ import com.bumptech.glide.Glide
 import com.example.onlineshop.databinding.ViewholderBestsellersBinding
 import com.example.onlineshop.model.ItemModels
 
-class BestSellerAdpater(val items: MutableList<ItemModels>):
-RecyclerView.Adapter<BestSellerAdpater.BestSellerViewHolder>(){
+class BestSellerAdapter(val items: MutableList<ItemModels>):
+RecyclerView.Adapter<BestSellerAdapter.BestSellerViewHolder>(){
 
     inner class BestSellerViewHolder(val binding: ViewholderBestsellersBinding):
     RecyclerView.ViewHolder(binding.root){

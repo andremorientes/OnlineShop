@@ -40,12 +40,13 @@
 
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Spring sale"
+                    android:text="@string/spring_sale"
                     android:textColor="@color/white"
                     android:textSize="30sp"
+                    android:layout_marginStart="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/imgMain"
                     app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
-                    android:text="Save up to 30$\non sale Sneakers "
+                    android:text="@string/save_up_to_30_non_sale_sneakers"
                     android:textColor="@color/white"
                     android:textSize="17sp"
                     app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -94,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Categories"
+                    android:text="@string/categories"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -106,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:baselineAligned="false"
                     android:fontFamily="@font/poppins"
-                    android:text="See All"
+                    android:text="@string/see_all"
                     android:textColor="@color/orange" />
             </LinearLayout>
 
@@ -144,11 +145,11 @@
 
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Best Seller Products"
+                    android:text="@string/best_seller_products"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -160,7 +161,7 @@
                     android:layout_height="wrap_content"
                     android:baselineAligned="false"
                     android:fontFamily="@font/poppins"
-                    android:text="See All"
+                    android:text="@string/see_all"
                     android:textColor="@color/orange" />
             </LinearLayout>
 
@@ -231,7 +232,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Explore"
+                        android:text="@string/explore"
                         android:textColor="@color/white"
                         android:textAlignment="center"
                         android:layout_marginTop="4dp"
@@ -258,7 +259,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text="Cart"
+                        android:text="@string/cart"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
                 </LinearLayout>
@@ -283,7 +284,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text="Favourite"
+                        android:text="@string/favourite"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
                 </LinearLayout>
@@ -320,6 +321,8 @@
             </LinearLayout>
         </com.google.android.material.bottomnavigation.BottomNavigationView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
 
 
 

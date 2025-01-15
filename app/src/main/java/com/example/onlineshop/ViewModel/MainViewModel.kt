@@ -13,4 +13,8 @@ class MainViewModel(): ViewModel() {
     val category: LiveData<MutableList<CategoryModel>> = repository.loadCategory()
 
     val bestSeller: LiveData<MutableList<ItemModels>> = repository.loadBestSeller()
+
+   fun loadItem(categoryId: String): LiveData<MutableList<ItemModels>>{
+       return repository.loadItem(categoryId)
+   }
 }

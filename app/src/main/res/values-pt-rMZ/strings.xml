@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OnlineShop</string>
-    <string name="shopping_online">Shopping Online</string>
-    <string name="intro_desc">The store of your dream.You will find everything that youneed here.</string>
-    <string name="btnStart">Start Shopping</string>
+    <string name="shopping_online">Compras on-line</string>
+    <string name="intro_desc">A loja dos seus sonhos. Você encontrará tudo o que precisa aqui.</string>
+    <string name="btnStart">Comece a Comprar</string>
+    <string name="search">Procurar</string>
+    <string name="profile">Perfil</string>
+    <string name="categories">Categorias</string>
+    <string name="best_seller_products">Produtos mais vendidos</string>
+    <string name="see_all">Ver tudo</string>
+    <string name="cart">Carrinho</string>
+    <string name="favourite">Favouritos</string>
+    <string name="explore">Explorar</string>
+    <string name="spring_sale">Promoção</string>
+    <string name="save_up_to_30_non_sale_sneakers">Economize até 30$\n em tênis em promoção</string>
 </resources>

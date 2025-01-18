@@ -13,4 +13,6 @@
     <string name="explore">Explore</string>
     <string name="spring_sale">Spring sale</string>
     <string name="save_up_to_30_non_sale_sneakers">Save up to 30$\non sale Sneakers</string>
+    <string name="select_size">Select Size</string>
+    <string name="add_to_cart">Add to Cart</string>
 </resources>

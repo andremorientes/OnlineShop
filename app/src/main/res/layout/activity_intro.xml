@@ -50,7 +50,7 @@
   <com.google.android.material.button.MaterialButton
       android:id="@+id/btn_start"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="48dp"
       android:backgroundTint="@color/white"
       android:fontFamily="@font/poppins_semibold"
       android:text="@string/btnStart"

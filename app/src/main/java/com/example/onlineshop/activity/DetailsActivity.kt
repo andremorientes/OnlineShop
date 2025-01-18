@@ -74,13 +74,14 @@ class DetailsActivity : AppCompatActivity() {
 
 
         binding.btnBack.setOnClickListener {
-            startActivity(Intent(
-                this, MainActivity::class.java))
+            finish()
 
 
         }
 
         binding.btnCart.setOnClickListener {
+            startActivity(Intent(
+                this, CartActivity::class.java))
 
         }
 

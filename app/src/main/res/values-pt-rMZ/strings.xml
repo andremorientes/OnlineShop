@@ -16,4 +16,9 @@
     <string name="save_up_to_30_non_sale_sneakers">Economize até 30$\n em tênis em promoção</string>
     <string name="select_size">Select Size</string>
     <string name="add_to_cart">Add to Cart</string>
+    <string name="my_cart">My Cart</string>
+    <string name="apply">Apply</string>
+    <string name="enter_your_cupoun">Enter Your cupoun</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="your_cart_is_empty">Your Cart is Empty</string>
 </resources>

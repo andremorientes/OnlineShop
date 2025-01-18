@@ -1,5 +1,6 @@
 package com.example.onlineshop.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -24,6 +25,14 @@ class MainActivity : AppCompatActivity() {
 
         initCategories()
         initBestSeller()
+        bottomNavigation()
+
+    }
+
+    private fun bottomNavigation() {
+        binding.carrinho.setOnClickListener {
+            startActivity(Intent(this, CartActivity::class.java))
+        }
 
     }
 

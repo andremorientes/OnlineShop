@@ -1,21 +1,78 @@
 package com.example.onlineshop.activity
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.onlineshop.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
+import com.example.onlineshop.Adapter.PicListAdapter
+import com.example.onlineshop.Helper.ManagmentCart
+import com.example.onlineshop.databinding.ActivityDetailsBinding
+import com.example.onlineshop.model.ItemModels
 
 class DetailsActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityDetailsBinding
+    private lateinit var item: ItemModels
+    private  var numberOrder= 1
+    private lateinit var managmentCart: ManagmentCart
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_details)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        binding = ActivityDetailsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        managmentCart= ManagmentCart(this)
+        getBundle()
+        initList()
+
+    }
+
+    private fun initList() {
+        val colorList= ArrayList<String>()
+        for (imageUrl in item.picUrl){
+            colorList.add(imageUrl)
+
         }
+        Glide.with(this)
+            .load(colorList[0])
+            .into(binding.imgPic)
+
+        binding.rvListPic.adapter= PicListAdapter(colorList,binding.imgPic)
+        binding.rvListPic.layoutManager=
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+    }
+
+
+    private fun getBundle(){
+        item=(intent.getSerializableExtra("object") as? ItemModels?) !!
+
+        binding.apply {
+            tvTitle.text= item.title
+            tvDescriptionDetails.text= item.description
+            tvPrice.text= "$"+item.price
+            tvRating.text=item.rating.toString()
+
+            btnAddCart.setOnClickListener {
+                item.numberInCart= numberOrder
+                managmentCart.insertItems(item)
+            }
+
+        }
+
+
+        binding.btnBack.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+
+
+        }
+
+        binding.btnCart.setOnClickListener {
+
+        }
+
+
+
     }
 }

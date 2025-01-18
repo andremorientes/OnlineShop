@@ -1,9 +1,11 @@
 package com.example.onlineshop.Adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.onlineshop.activity.DetailsActivity
 import com.example.onlineshop.databinding.ViewholderBestsellersBinding
 import com.example.onlineshop.model.ItemModels
 
@@ -34,6 +36,12 @@ RecyclerView.Adapter<BestSellerAdapter.BestSellerViewHolder>(){
         Glide.with(holder.itemView)
             .load(items[position].logo)
             .into(holder.binding.imageMarca)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, DetailsActivity::class.java)
+            intent.putExtra("object", items[position])
+            holder.itemView.context.startActivity(intent)
+        }
 
     }
 }

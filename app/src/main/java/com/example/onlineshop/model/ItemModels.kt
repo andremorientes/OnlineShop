@@ -11,6 +11,6 @@ data class ItemModels(
     val size: ArrayList<String> = ArrayList(),
     val price: Double=0.0,
     var rating: Double=0.0,
-    val numberInChart: Int=0
+    var numberInCart: Int=0
 
 ): Serializable

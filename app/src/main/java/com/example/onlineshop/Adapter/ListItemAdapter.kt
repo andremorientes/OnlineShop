@@ -1,10 +1,12 @@
 package com.example.onlineshop.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.onlineshop.activity.DetailsActivity
 import com.example.onlineshop.databinding.ViewholderItem1Binding
 import com.example.onlineshop.databinding.ViewholderItem2Binding
 import com.example.onlineshop.model.ItemModels
@@ -86,6 +88,12 @@ class ListItemAdapter(val items: MutableList<ItemModels>) :
                     Glide.with(holder.itemView)
                         .load(logo)
                         .into(holder.binding.imageMarca)
+
+                    holder.itemView.setOnClickListener {
+                        val intent = Intent(holder.itemView.context, DetailsActivity::class.java)
+                        intent.putExtra("object", items[position])
+                        holder.itemView.context.startActivity(intent)
+                    }
                 }
 
                 is ViewHolderItem2 -> {

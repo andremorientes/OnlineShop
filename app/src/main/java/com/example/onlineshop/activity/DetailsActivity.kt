@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.onlineshop.Adapter.PicListAdapter
+import com.example.onlineshop.Adapter.SizeListAdapter
 import com.example.onlineshop.Helper.ManagmentCart
 import com.example.onlineshop.databinding.ActivityDetailsBinding
 import com.example.onlineshop.model.ItemModels
@@ -42,6 +43,16 @@ class DetailsActivity : AppCompatActivity() {
         binding.rvListPic.layoutManager=
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
+        val sizeList= ArrayList<String>()
+        for (size in item.size){
+            sizeList.add(size)
+
+        }
+
+        binding.rvListSize.adapter= SizeListAdapter(sizeList)
+        binding.rvListSize.layoutManager=
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
     }
 
 
@@ -63,7 +74,8 @@ class DetailsActivity : AppCompatActivity() {
 
 
         binding.btnBack.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(
+                this, MainActivity::class.java))
 
 
         }

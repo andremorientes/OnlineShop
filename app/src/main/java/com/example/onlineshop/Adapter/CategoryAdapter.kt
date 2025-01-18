@@ -48,19 +48,7 @@ class CategoryAdapter(val items: MutableList<CategoryModel>) :
             .load(item.picUrl)
             .into(holder.binding.imgCategory)
 
-        if ( selectedPosition == position) {
-            holder.binding.imgCategory.setImageResource(R.drawable.orange_bg)
-            ImageViewCompat.setImageTintList(
-                holder.binding.imgCategory,
-                ColorStateList.valueOf(ContextCompat.getColor(holder.itemView.context, R.color.white))
-            )
-        }else{
-            holder.binding.imgCategory.setImageResource(R.drawable.orange_circle)
-            ImageViewCompat.setImageTintList(
-                holder.binding.imgCategory,
-                ColorStateList.valueOf(ContextCompat.getColor(holder.itemView.context, R.color.black))
-            )
-        }
+
 
         holder.binding.root.setOnClickListener {
             if (position!=RecyclerView.NO_POSITION){

@@ -21,4 +21,14 @@
     <string name="enter_your_cupoun">Enter Your cupoun</string>
     <string name="subtotal">Subtotal</string>
     <string name="your_cart_is_empty">Your Cart is Empty</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_your_password">Forgot your Password?</string>
+    <string name="name">Name</string>
+    <string name="register">Register</string>
+    <string name="don_t_have_an_account">Don´t have an account?</string>
+    <string name="sign_up_now">Sign Up Now</string>
+    <string name="sign_now">Sign Now</string>
+    <string name="do_you_have_an_account">Do you have an account?</string>
 </resources>

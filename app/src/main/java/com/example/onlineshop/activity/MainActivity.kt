@@ -11,6 +11,7 @@ import com.example.onlineshop.Adapter.BestSellerAdapter
 import com.example.onlineshop.Adapter.CategoryAdapter
 import com.example.onlineshop.ViewModel.MainViewModel
 import com.example.onlineshop.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,17 +23,34 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        checkUser()
         initCategories()
         initBestSeller()
         bottomNavigation()
 
     }
 
+
+
+    private fun checkUser(){
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser == null){
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
+    }
+
     private fun bottomNavigation() {
         binding.carrinho.setOnClickListener {
             startActivity(Intent(this, CartActivity::class.java))
         }
+        binding.profile.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+        binding.favourite.setOnClickListener {
+            startActivity(Intent(this, FavouriteActivity::class.java))
+        }
+
 
     }
 

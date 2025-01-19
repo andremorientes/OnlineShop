@@ -51,6 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
             android:hint="@string/email" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -66,7 +68,6 @@
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp"
         app:boxStrokeColor="@color/white"
-        app:boxStrokeWidth="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
@@ -75,6 +76,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
+            android:inputType="textPassword"
+            android:maxLines="1"
             android:hint="@string/password" />
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -48,6 +48,10 @@ class LoginActivity : AppCompatActivity() {
                 viewModel.login(email, password)
             }
 
+            btnSignUp.setOnClickListener {
+                startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
+            }
+
         }
 
         viewModel.loginStatus.observe(this, Observer { result ->

@@ -15,7 +15,7 @@ class AuthViewModel(
     private val _loginStatus = MutableLiveData<Result<String>>()
     val loginStatus: LiveData<Result<String>> get() = _loginStatus
 
-    // Função para registrar usuário
+
     fun register(email: String, password: String) {
         authRepository.register(email, password).observeForever { result ->
             _registrationStatus.value = result

@@ -31,4 +31,5 @@
     <string name="sign_up_now">Sign Up Now</string>
     <string name="sign_now">Sign Now</string>
     <string name="do_you_have_an_account">Do you have an account?</string>
+    <string name="profile_title">Profile</string>
 </resources>

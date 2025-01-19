@@ -3,8 +3,9 @@ package com.example.onlineshop.activity
 import android.content.Intent
 import android.os.Bundle
 import com.example.onlineshop.databinding.ActivityIntroBinding
+import com.google.firebase.auth.FirebaseAuth
 
-    class IntroActivity : BaseActivity() {
+class IntroActivity : BaseActivity() {
     private lateinit var binding: ActivityIntroBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,8 +14,15 @@ import com.example.onlineshop.databinding.ActivityIntroBinding
         setContentView(binding.root)
 
         binding.btnStart.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            val currentUser = FirebaseAuth.getInstance().currentUser
+            if (currentUser!=null){
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            }else{
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            }
+
         }
 
     }

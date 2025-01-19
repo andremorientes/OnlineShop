@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/redOrange"
-    tools:context=".activity.RegisterActivity">
+    tools:context=".activity.RegisterActivity"
+    android:paddingTop="60dp">
 
 
     <ImageView
@@ -38,6 +39,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
+            android:inputType="textPersonName"
+            android:maxLines="1"
             android:hint="@string/name" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,14 +65,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
             android:hint="@string/email" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_margin="16dp"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
@@ -85,6 +90,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
+            android:inputType="textPassword"
+            android:maxLines="1"
             android:hint="@string/password" />
     </com.google.android.material.textfield.TextInputLayout>
 

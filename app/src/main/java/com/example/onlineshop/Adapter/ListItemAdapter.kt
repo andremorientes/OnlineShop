@@ -108,6 +108,12 @@ class ListItemAdapter(val items: MutableList<ItemModels>) :
                     Glide.with(holder.itemView)
                         .load(logo)
                         .into(holder.binding.imageMarca)
+
+                    holder.itemView.setOnClickListener {
+                        val intent = Intent(holder.itemView.context, DetailsActivity::class.java)
+                        intent.putExtra("object", items[position])
+                        holder.itemView.context.startActivity(intent)
+                    }
                 }
             }
 
